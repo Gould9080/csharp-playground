@@ -218,7 +218,20 @@ namespace cSharp
 
         }
 
-
+        public void miniMaxSum(List<int> arr)
+        {
+            arr.Sort();
+            long min = arr.Min();
+            long max = arr.Max();
+            long sum = 0;
+            for (int i = 0; i < arr.Count; i++)
+            {
+                sum += arr[i];
+            }
+            long minSum = sum - max;
+            long maxSum = sum - min;
+            Console.WriteLine($"{minSum} {maxSum}");
+        }
 
 
 
