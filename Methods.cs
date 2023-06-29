@@ -187,6 +187,40 @@ namespace cSharp
             }
         }
 
+        public void plusMinus(List<int> arr)
+        {
+            decimal count = arr.Count;
+            decimal plus = 0;
+            decimal minus = 0;
+            decimal zero = 0;
+            for (int i = 0; i < arr.Count; i++)
+            {
+                if (arr[i] > 0)
+                {
+                    plus++;
+                }
+                else if (arr[i] < 0)
+                {
+                    minus++;
+                }
+                else
+                {
+                    zero++;
+                }
+            }
+            decimal plusRat = plus / count;
+            decimal minusRat = minus / count;
+            decimal zeroRat = zero / count;
+
+            Console.WriteLine(String.Format("{0:#,0.000000}", plusRat));
+            Console.WriteLine(String.Format("{0:#,0.000000}", minusRat));
+            Console.WriteLine(String.Format("{0:#,0.000000}", zeroRat));
+
+        }
+
+
+
+
 
     }
 }

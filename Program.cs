@@ -19,7 +19,6 @@ namespace cSharp
 
             //method.FibPerimeter(5);
 
-            method.fibRecur(5);
 
 
             if (Debugger.IsAttached)
