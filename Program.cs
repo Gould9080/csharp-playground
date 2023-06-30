@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace cSharp
@@ -25,7 +26,16 @@ namespace cSharp
 
             //method.miniMaxSum(intList);
 
-            method.timeConversion("12:01:00AM");
+            //method.timeConversion("12:01:00AM");
+
+            string[] stringArr = { "ab", "ab", "abc" };
+            string[] queriesArr = { "ab", "abc", "bc" };
+            List<string> strings = new List<string>();
+            List<string> queries = new List<string>();
+            strings.AddRange(stringArr);
+            queries.AddRange(queriesArr);
+
+            method.matchingStrings(strings, queries);
 
             if (Debugger.IsAttached)
             {

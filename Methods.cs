@@ -258,6 +258,29 @@ namespace cSharp
             return $"{hours}{remainder}";
         }
 
+        public List<int> matchingStrings(List<string> strings, List<string> queries)
+        {
+            // return List of the number of times each query shows up in the strings list
+            List<int> matches = new List<int>();
+            int contains = 0;
+            foreach (string q in queries)
+            {
+                if (strings.Contains(q))
+                {
+                    foreach (string s in strings)
+                    {
+                        if (s == q)
+                        {
+                            contains++;
+                        }
+                    }
+                }
+                matches.Add(contains);
+                contains = 0;
+            }
+            Console.WriteLine($"{matches[0]} {matches[1]} {matches[2]}");
+            return matches;
+        }
 
 
     }
