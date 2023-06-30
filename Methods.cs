@@ -220,6 +220,8 @@ namespace cSharp
 
         public void miniMaxSum(List<int> arr)
         {
+            // print out minimum and maximum sum of 4 out of 5 numbers in a List<int>
+            // allow for sum larger than int32
             arr.Sort();
             long min = arr.Min();
             long max = arr.Max();
@@ -231,6 +233,29 @@ namespace cSharp
             long minSum = sum - max;
             long maxSum = sum - min;
             Console.WriteLine($"{minSum} {maxSum}");
+        }
+
+        public string timeConversion(string s)
+        {
+            // take in AM/PM time format and return military time
+            string ampm = s.Substring(s.Length - 2);
+            string hours = s.Substring(0, 2);
+            string remainder = s.Substring(2, 6);
+            int intHours = int.Parse(hours);
+
+            if (ampm == "AM" && hours == "12")
+            {
+                hours = "00";
+            }
+
+            if (ampm == "PM" && hours != "12")
+            {
+                intHours += 12;
+                hours = intHours.ToString();
+            }
+
+            Console.WriteLine($"{hours}{remainder}");
+            return $"{hours}{remainder}";
         }
 
 

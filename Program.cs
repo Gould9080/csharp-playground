@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace cSharp
@@ -20,11 +19,13 @@ namespace cSharp
 
             //method.FibPerimeter(5);
 
-            int[] myArr = { 2111111111, 222222222, 333333333, 444444444, 555555555 };
-            List<int> intList = new List<int>();
-            intList.AddRange(myArr);
+            //int[] myArr = { 2111111111, 222222222, 333333333, 444444444, 555555555 };
+            //List<int> intList = new List<int>();
+            //intList.AddRange(myArr);
 
-            method.miniMaxSum(intList);
+            //method.miniMaxSum(intList);
+
+            method.timeConversion("12:01:00AM");
 
             if (Debugger.IsAttached)
             {
