@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace cSharp
@@ -28,14 +27,17 @@ namespace cSharp
 
             //method.timeConversion("12:01:00AM");
 
-            string[] stringArr = { "ab", "ab", "abc" };
-            string[] queriesArr = { "ab", "abc", "bc" };
-            List<string> strings = new List<string>();
-            List<string> queries = new List<string>();
-            strings.AddRange(stringArr);
-            queries.AddRange(queriesArr);
+            //string[] stringArr = { "ab", "ab", "abc" };
+            //string[] queriesArr = { "ab", "abc", "bc" };
+            //List<string> strings = new List<string>();
+            //List<string> queries = new List<string>();
+            //strings.AddRange(stringArr);
+            //queries.AddRange(queriesArr);
 
-            method.matchingStrings(strings, queries);
+            //method.matchingStrings(strings, queries);
+
+            int[] arr = { 3, 4, 2, 3, 5, 4, 3, 2, 1, 2, 4, 4, 2, 5, 2 };
+            method.FindMostFrequent(arr);
 
             if (Debugger.IsAttached)
             {

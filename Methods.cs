@@ -282,6 +282,29 @@ namespace cSharp
             return matches;
         }
 
+        public int FindMostFrequent(int[] arr)
+        {
+            Dictionary<int, int> numCount = new Dictionary<int, int>();
+
+            foreach (int num in arr)
+            {
+                if (numCount.ContainsKey(num))
+                {
+                    numCount[num]++;
+                }
+                else
+                {
+                    numCount[num] = 1;
+                }
+            }
+
+            IEnumerable<int> sorted = from entry in numCount orderby entry.Key descending select entry.Value;
+
+            int largest = sorted.FirstOrDefault();
+            Console.WriteLine(numCount[largest]);
+            return numCount[largest];
+        }
+
 
     }
 }
