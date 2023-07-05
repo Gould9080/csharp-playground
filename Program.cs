@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace cSharp
@@ -37,7 +38,12 @@ namespace cSharp
             //method.matchingStrings(strings, queries);
 
             int[] arr = { 3, 4, 2, 3, 5, 4, 3, 2, 1, 2, 4, 4, 2, 5, 2 };
-            method.FindMostFrequent(arr);
+            List<int> intList = new List<int>();
+            intList.AddRange(arr);
+
+            //method.FindMostFrequent(arr);
+
+
 
             if (Debugger.IsAttached)
             {

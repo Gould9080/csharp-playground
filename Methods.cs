@@ -222,7 +222,6 @@ namespace cSharp
         {
             // print out minimum and maximum sum of 4 out of 5 numbers in a List<int>
             // allow for sum larger than int32
-            arr.Sort();
             long min = arr.Min();
             long max = arr.Max();
             long sum = 0;
@@ -303,6 +302,38 @@ namespace cSharp
             int largest = sorted.FirstOrDefault();
             Console.WriteLine(numCount[largest]);
             return numCount[largest];
+        }
+
+
+        public void fizzBuzz(int n)
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                string result = "";
+
+                if (i % 3 == 0)
+                {
+                    result += "Fizz";
+                }
+
+                if (i % 5 == 0)
+                {
+                    result += "Buzz";
+                }
+
+                else if (i % 3 != 0 && i % 5 != 0)
+                {
+                    result = i.ToString();
+                }
+
+                Console.WriteLine(result);
+            }
+        }
+
+        public int findMedian(List<int> arr)
+        {
+            arr.Sort();
+            return arr[(arr.Count / 2) + 1];
         }
 
 
