@@ -304,37 +304,47 @@ namespace cSharp
             return numCount[largest];
         }
 
-
         public void fizzBuzz(int n)
         {
             for (int i = 1; i <= n; i++)
             {
                 string result = "";
-
                 if (i % 3 == 0)
                 {
                     result += "Fizz";
                 }
-
                 if (i % 5 == 0)
                 {
                     result += "Buzz";
                 }
-
                 else if (i % 3 != 0 && i % 5 != 0)
                 {
                     result = i.ToString();
                 }
-
                 Console.WriteLine(result);
             }
         }
 
-        public int findMedian(List<int> arr)
+        public int lonelyinteger(List<int> a)
         {
-            arr.Sort();
-            return arr[(arr.Count / 2) + 1];
+            Dictionary<int, int> numCount = new Dictionary<int, int>();
+
+            foreach (int num in a)
+            {
+                if (numCount.ContainsKey(num))
+                {
+                    numCount[num]++;
+                }
+                else
+                {
+                    numCount[num] = 1;
+                }
+            }
+            int result = numCount.FirstOrDefault(n => n.Value == 1).Key;
+            return result;
         }
+
+
 
 
     }
