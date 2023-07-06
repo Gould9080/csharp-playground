@@ -39,11 +39,14 @@ namespace cSharp
 
             //int[] arr = { 3, 4, 2, 3, 5, 4, 3, 2, 1, 2, 4, 4, 2, 5, 2 };
             int[] arr = { 1, 2, 3, 4, 3, 2, 1 };
+
             List<int> intList = new List<int>();
             intList.AddRange(arr);
+            List<int> list1 = new List<int>();
+            var test = 11 2 4;
 
             //method.FindMostFrequent(arr);
-            method.lonelyinteger(intList);
+            //method.lonelyinteger(intList);
 
 
             if (Debugger.IsAttached)

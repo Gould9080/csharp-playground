@@ -344,6 +344,21 @@ namespace cSharp
             return result;
         }
 
+        public int diagonalDifference(List<List<int>> arr)
+        {
+            //List[0] = # of rows: 3
+            //List[1] = 1st row: {11 2 4}
+            //List[2] = 2nd row: {4 5 6}
+            //List[3] = 3rd row: {10 8 -12}
+
+            int diff = 0;
+            int length = arr.Count - 1;
+            for (int i = 0; i < arr.Count; i++)
+            {
+                diff += arr[i][i] - arr[i][length - i];
+            }
+            return Math.Abs(diff);
+        }
 
 
 
