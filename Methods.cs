@@ -360,6 +360,45 @@ namespace cSharp
             return Math.Abs(diff);
         }
 
+        public int findMedian(List<int> arr)
+        {
+            int med = (arr.Count / 2);
+            arr.Sort();
+            Console.WriteLine(arr[med]);
+            return arr[med];
+        }
+
+        public List<int> countingSort(List<int> arr)
+        {
+            int[] counter = new int[arr.Count];
+            foreach (int i in arr)
+            {
+                counter[i]++;
+            }
+            return counter.ToList();
+        }
+
+        public int flippingMatrix(List<List<int>> matrix)
+        {
+            int quadSize = matrix[0].Count / 2;
+            int result = 0;
+
+            for (int i = 0; i < quadSize; i++)
+            {
+                for (int j = 0; j < quadSize; j++)
+                {
+                    int row1 = i;
+                    int row2 = (quadSize * 2) - 1 - i;
+                    int col1 = j;
+                    int col2 = (quadSize * 2) - 1 - j;
+                    int rowMax = Math.Max(matrix[row1][col1], matrix[row1][col2]);
+                    int colMax = Math.Max(matrix[row2][col1], matrix[row2][col2]);
+                    result += Math.Max(rowMax, colMax);
+                }
+            }
+            Console.WriteLine(result);
+            return result;
+        }
 
 
     }

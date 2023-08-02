@@ -39,15 +39,21 @@ namespace cSharp
 
             //int[] arr = { 3, 4, 2, 3, 5, 4, 3, 2, 1, 2, 4, 4, 2, 5, 2 };
             int[] arr = { 1, 2, 3, 4, 3, 2, 1 };
+            // sorted is 1 1 2 2 3 3 4
 
             List<int> intList = new List<int>();
             intList.AddRange(arr);
-            List<int> list1 = new List<int>();
-            var test = 11 2 4;
 
-            //method.FindMostFrequent(arr);
-            //method.lonelyinteger(intList);
 
+            List<int> listA = new List<int> { 112, 42, 83, 119 };
+            List<int> listB = new List<int> { 56, 125, 56, 49 };
+            List<int> listC = new List<int> { 15, 78, 101, 43 };
+            List<int> listD = new List<int> { 62, 98, 114, 108 };
+
+            //sum = 414
+            List<List<int>> theMatrix = new List<List<int>> { listA, listB, listC, listD };
+
+            method.flippingMatrix(theMatrix);
 
             if (Debugger.IsAttached)
             {
