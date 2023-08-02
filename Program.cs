@@ -51,9 +51,9 @@ namespace cSharp
             List<int> listD = new List<int> { 62, 98, 114, 108 };
 
             //sum = 414
-            List<List<int>> theMatrix = new List<List<int>> { listA, listB, listC, listD };
+            //List<List<int>> theMatrix = new List<List<int>> { listA, listB, listC, listD };
 
-            method.flippingMatrix(theMatrix);
+            method.TwoSum(arr, 6);
 
             if (Debugger.IsAttached)
             {

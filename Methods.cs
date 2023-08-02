@@ -18,41 +18,22 @@ namespace cSharp
             Console.WriteLine("Your letter was: " + entry);
         }
 
-        public int[] TwoSum(int[] numbers, int target)
+        public int[] TwoSum(int[] numbers, int target) // return indices of two ints that add up to target
         {
-            /*int[] result = new int[2];
-            for (int i = 0; i < numbers.Length - 1; i++)
-            {
-                for (int j = i + 1; j < numbers.Length; j++)
-                {
-                    int sum = numbers[i] + numbers[j];
-                    if (sum == target)
-                    {
-                        Console.WriteLine("i= " + i + ", j= " + j);
-                        result[0] = i;
-                        result[1] = i + 1;
-                    }
-                }
-            }
-            return result;
-            */
-
             Dictionary<int, int> resultDictionary = new Dictionary<int, int>();
+
             for (int i = 0; i < numbers.Length; i++)
             {
                 int firstNumber = numbers[i];
                 int secondNumber = target - firstNumber;
                 if (resultDictionary.TryGetValue(secondNumber, out int index))
                 {
-                    return new[] {
-                        index,
-                        i
-                    };
+                    Console.WriteLine(index);
+                    Console.WriteLine(i);
+                    return new[] { index, i };
                 }
-                //resultDictionary.Add(firstNumber, i);
                 resultDictionary[firstNumber] = i;
             }
-            Console.WriteLine();
             return Array.Empty<int>();
         }
 
@@ -60,9 +41,9 @@ namespace cSharp
         {
             string readFile = "alice.txt";
             string writeFile = "output.txt";
-            string currentDirectory = Environment.CurrentDirectory;
-            string directory = @"C:\Users\james\source\repos\cSharp\";
-            // the @ tells the compiler to use the string as is (no escape needed)
+            //string currentDirectory = Environment.CurrentDirectory;
+            string directory = @"C:\Users\james\source\repos\cSharp\"; // @ says to use the string as is (no escape needed)
+
             string fullReadPath = Path.Combine(directory, readFile);
             string fullWritePath = Path.Combine(directory, writeFile);
             try
@@ -83,9 +64,7 @@ namespace cSharp
                         if (sb.Length > 0)
                         {
                             eachLine = lineNumber + ": " + sb.ToString();
-
                         }
-
 
                         sw.WriteLine(eachLine);
                         lineNumber++;
@@ -126,7 +105,6 @@ namespace cSharp
             {
                 Console.WriteLine(ex.Message);
             }
-
         }
 
 
@@ -164,13 +142,6 @@ namespace cSharp
                 c = a + b;
             }
             BigInteger result = fibs.Last();
-            /*
-            foreach (BigInteger i in fibs)
-            {
-                Console.WriteLine(i);
-
-            }
-            */
             Console.WriteLine(result);
             return result;
         }
