@@ -82,6 +82,56 @@ namespace cSharp
 
         }
 
+        public int[] MoveZeroes(int[] arr) // move all zeroes to the end, don't change order of other nums
+        {
+            /*
+            int count = arr.Where(x => x == 0).Count();
+            int[] filtered = arr.Where(x => x != 0).ToArray();
+            List<int> result = new List<int>();
+            result.AddRange(filtered);
+
+            for (int i = 0; i < count; i++)
+            {
+                result.Add(0);
+            }
+            return result.ToArray();
+            */
+            int[] result = arr.OrderBy(x => x == 0).ToArray();
+            foreach (int i in result)
+            {
+                Console.Write(i);
+            }
+            return result;
+        }
+
+        public void ZigZagSequence(string[] args) // make an array have the first half increasing, then second half decreasing
+        {
+            List<int> list = new List<int>();
+            foreach (string s in args)
+            {
+                list.Add(int.Parse(s));
+            }
+
+            list.Sort((a, b) => a - b);
+
+            List<int> newList = new List<int>();
+
+            for (int i = 0; i < list.Count; i += 2)
+            {
+                newList.Add(list[i]);
+            }
+            for (int i = args.Length - 2; i > 0; i -= 2)
+            {
+                newList.Add(list[i]);
+            }
+            foreach (int i in newList)
+            {
+                Console.Write(i);
+            }
+        }
+
+
+
         public void ReadCSV()
         {
             List<string> allWords = new List<string>();

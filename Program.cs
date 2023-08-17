@@ -38,7 +38,9 @@ namespace cSharp
             //method.matchingStrings(strings, queries);
 
             //int[] arr = { 3, 4, 2, 3, 5, 4, 3, 2, 1, 2, 4, 4, 2, 5, 2 };
-            int[] arr = { 1, 2, 3, 4, 3, 2, 1 };
+            int[] arr = { 2, 3, 5, 1, 4 };
+            string[] arr2 = { "2", "3", "5", "1", "4" };
+            int[] arr3 = { 1, 2, 0, 1, 0, 1, 0, 3, 0, 1 };
             // sorted is 1 1 2 2 3 3 4
 
             List<int> intList = new List<int>();
@@ -53,7 +55,7 @@ namespace cSharp
             //sum = 414
             //List<List<int>> theMatrix = new List<List<int>> { listA, listB, listC, listD };
 
-            method.TwoSum(arr, 6);
+            method.MoveZeroes(arr3);
 
             if (Debugger.IsAttached)
             {
